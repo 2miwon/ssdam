@@ -1,7 +1,3 @@
-# 📚 쓰담 (Ssdam) - AI 기반 글쓰기 도우미
-
-쓰담은 작가들의 창작 여정을 지원하는 Notion-Like 워크스페이스 플랫폼입니다. AI 기술을 활용해 주제 발굴부터 원고 교정·교열까지 원스톱으로 지원합니다.
-
 ![Editor.js](https://img.shields.io/badge/Editor.js-000000.svg?style=for-the-badge&logo=editor.js&logoColor=white)
 ![Vue.js](https://img.shields.io/badge/Vue.js-41B883.svg?style=for-the-badge&logo=vuedotjs&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-000000.svg?style=for-the-badge&logo=fastapi&logoColor=white)
@@ -9,6 +5,10 @@
 ![Python](https://img.shields.io/badge/Python-3C8C00.svg?style=for-the-badge&logo=python&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-121517.svg?style=for-the-badge&logo=github&logoColor=white)
+
+# 📚 쓰담 (Ssdam) - AI 기반 글쓰기 도우미
+
+쓰담은 작가들의 창작 여정을 지원하는 Notion-Like 워크스페이스 플랫폼입니다. AI 기술을 활용해 주제 발굴부터 원고 교정·교열까지 원스톱으로 지원합니다.
 
 # Quick Start
 ```
