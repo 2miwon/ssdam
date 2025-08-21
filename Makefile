@@ -8,10 +8,10 @@ venv:
 	chmod +x .venv/bin/activate
 
 backend-setup: venv
-	cd backend && .venv/bin/pip install --no-cache-dir --upgrade -r requirements.txt
+	.venv/bin/pip install --no-cache-dir --upgrade -r requirements.txt
 
 backend-run: venv
-	cd backend && .venv/bin/python -m uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+	.venv/bin/python -m uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
 
 backend-docker:
 	docker-compose -f docker-compose-dev.yml up --build
