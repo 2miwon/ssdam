@@ -1,0 +1,15 @@
+export const RevisionStatus = Object.freeze({
+  NONE: 'none',
+  BLOCK_LLM_REQUESTED: 'block_llm_requested',
+  LLM_REQUESTED: 'llm_requested',
+  LLM_DONE: 'llm_done',
+  LLM_FAIL: 'llm_fail',
+  EMPTY_REVISION: 'empty_revision',
+  EMPTY_INPUT: 'empty_input',
+  USER_CHECK_DONE: 'user_check_done',
+  INK_COIN_LIMIT_EXCEEDED: 'ink_coin_limit_exceeded',
+  TEXT_OVER_LIMIT_SINGLE_BLOCK: 'text_over_limit_single_block',
+  NO_PAGE_SELECTED: 'no_page_selected',
+  MOBILE_NOT_SUPPORTED: 'mobile_not_supported',
+  TOO_MANY_CONCURRENT_REVISION: 'too_many_concurrent_revision',
+});

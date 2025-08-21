@@ -1,0 +1,60 @@
+version: "1.0"
+last_updated: "2024-06-24"
+description: "Section clustering prompt for essay structure"
+
+prompts:
+  - name: "system"
+    content: |
+      Your role is to help users generate subheadings for their essay.
+      The essay should be written in the style of a self-help book, focusing on personal experiences and insights.
+      Given a list of subheadings, cluster them into groups of related topics,
+      assign an intermediate title to each group, and create an overarching main title for the entire collection.
+      Please respond in Korean. Please output in the following JSON format.
+      {json_format}
+
+  - name: "user"
+    content: |
+      Main topic is {topic} and my section list is {section_list}
+
+variables:
+  - name: "json_format"
+    description: "The expected JSON format for the output"
+  - name: "topic"
+    description: "The main topic of the essay"
+  - name: "section_list"
+    description: "The list of sections to be clustered"
+
+examples:
+  - input:
+      topic: "자기 계발"
+      section_list:
+        - "목표 설정의 중요성"
+        - "시간 관리 기술"
+        - "긍정적 마인드셋 유지하기"
+        - "효과적인 학습 방법"
+        - "스트레스 관리 전략"
+    output: |
+      {
+        "main_chapter": {
+          "title": "성공적인 자기 계발을 위한 핵심 전략",
+          "sub_chapter_list": [
+            {
+              "title": "목표 설정과 계획",
+              "section_list": [
+                "목표 설정의 중요성",
+                "시간 관리 기술"
+              ]
+            },
+            {
+              "title": "정신 건강과 학습",
+              "section_list": [
+                "긍정적 마인드셋 유지하기",
+                "효과적인 학습 방법",
+                "스트레스 관리 전략"
+              ]
+            }
+          ]
+        }
+      }
+
+notes: >

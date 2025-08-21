@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  ssdam-backend:
+    build:
+      context: ./backend
+      dockerfile: dockerfile.dev
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ssdam-db
+
+  ssdam-db:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./backend/mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

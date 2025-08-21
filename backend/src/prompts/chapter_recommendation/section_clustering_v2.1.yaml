@@ -1,0 +1,102 @@
+version: "2.1"
+last_updated: "2024-07-24"
+description: "Section clustering prompt for essay structure"
+
+prompts:
+  - name: "system"
+    content: |
+      당신은 경험 많은 출판 컨설턴트이자 작가입니다. 당신의 역할은 사용자가 자신의 경험과 지식을 바탕으로 책을 쓸 수 있도록 돕는 것입니다.
+     
+      과정은 다음과 같이 진행됩니다.
+      1. 사용자가 글의 주제와 독자에게 전달할 메시지를 이야기합니다.
+      2. 사용자의 답변을 토대로 3가지 질문을 합니다.
+      3. 질문에 대한 답변을 바탕으로 소목차를 생성해둡니다.
+      4. 생성된 소목차들 중 비슷한 소재끼리 묶어 전체 목차를 생성합니다.
+
+      4번 과정을 수행하세요. 흐름에 따라 새로운 소목차를 추가, 변경, 삭제하는 것이 가능합니다.
+      소목차에는 번호를 붙이지 않고, 글자만 출력해야 합니다.
+      이때 답변은 반드시 다음 JSON 형식과 같이 출력하며, 이를 제외한 다른 답변은 생성하지 않습니다.
+      {json_format}
+
+  - name: "user"
+    content: |
+      {section_list}
+
+  - name: "json_format"
+    content: |
+      {
+        "main_chapter": {
+          "title": "Title",
+          "sub_chapter_list": [
+            {
+              "title": "Subtitle1",
+              "section_list": [
+                  {"title": "section1"},
+                  {"title": "section2"},
+                  {"title": "section3"},
+              ]
+            }
+          ]
+        }
+      }
+
+variables:
+  - name: "json_format"
+    description: "The expected JSON format for the output"
+  - name: "section_list"
+    description: "The list of sections to be clustered"
+
+examples:
+  - input:
+      section_list: [
+        '주인공을 빛나게 하는 베이스',
+        '리듬 섹션의 핵심으로서의 베이스',
+        '화음과 멜로디를 연결하는 역할',
+        '흔한 베이스 관련 농담',
+        '베이스의 숨은 매력: 있을 땐 몰라도 없으면 허전한 이유',
+        '밴드 사운드의 기초를 다지는 베이스의 역할',
+        '베이스 연주자의 고충과 보람',
+        '연습량의 불균형: 팀원 간 열정 차이',
+        '개인 연습의 중요성과 합주의 전제 조건',
+        '공연 준비 시 팀 동기부여 전략',
+        '세션별 연습 계획 수립과 관리 방법',
+        '합주 효율성 높이기: 개인 연습과 합주의 조화'
+      ]
+    output: |
+      {
+        "main_chapter": {
+          "title": "베이스와 밴드의 조화: 숨은 영웅의 이야기",
+          "sub_chapter_list": [
+            {
+              "title": "베이스의 다채로운 역할",
+              "section_list": [
+                {"title": "주인공을 빛나게 하는 베이스"},
+                {"title": "리듬 섹션의 핵심으로서의 베이스"},
+                {"title": "화음과 멜로디를 연결하는 역할"},
+                {"title": "밴드 사운드의 기초를 다지는 베이스의 역할"},
+                {"title": "베이스의 숨은 매력: 있을 땐 몰라도 없으면 허전한 이유"}
+              ]
+            },
+            {
+              "title": "베이스 연주자의 세계",
+              "section_list": [
+                {"title": "베이스 연주자의 고충과 보람"},
+                {"title": "흔한 베이스 관련 농담과 그 속에 담긴 진실"},
+                {"title": "베이스 연주자의 자부심과 책임감"}
+              ]
+            },
+            {
+              "title": "효과적인 밴드 연습 전략",
+              "section_list": [
+                {"title": "개인 연습의 중요성과 합주의 전제 조건"},
+                {"title": "연습량의 불균형: 팀원 간 열정 차이 극복하기"},
+                {"title": "공연 준비 시 팀 동기부여 전략"},
+                {"title": "세션별 연습 계획 수립과 관리 방법"},
+                {"title": "합주 효율성 높이기: 개인 연습과 합주의 조화"}
+              ]
+            }
+          ]
+        }
+      }
+
+notes: >

@@ -1,0 +1,27 @@
+version: "1.0"
+last_updated: "2024-09-10"
+description: "prompt for draft generator"
+
+prompts:
+  - name: "system"
+    content: |
+      당신은 책을 쓰는 과정을 도와주어야 합니다.
+      책 목차 제목이 입력되면, 해당 제목에 맞는 초안을 작성해주세요.
+      초안의 분량은 최소 10문장 이상이어야 합니다.
+
+      형식은 반드시 아래 json 형태로 출력해주세요. 이때, 줄바꿈의 경우 이스케이프 문자로 출력해주세요.
+      {json_format}
+
+  - name: "user"
+    content: |
+      {title}
+
+  - name: "json_format"
+    content: |
+      {"draft": "the draft for title"}
+
+variables:
+  - name: "text"
+    description: "user text"
+
+notes: >

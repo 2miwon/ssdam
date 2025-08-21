@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="쓰담: 이야기를 쓰고, 생각을 담는 공간">
+    <meta name="naver-site-verification" content="a4f4a51fc65c4ffa3b114442d3dfdb388bb69604" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="canonical" href="https://ssdam.ink">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- meta tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ssdam.ink">
+    <meta property="og:title" content="쓰담">
+    <meta property="og:image" content="<%= BASE_URL %>assets/ssdam.png">
+    <meta property="og:description" content="이야기를 쓰고, 생각을 담다">
+    <meta property="og:site_name" content="쓰담">
+    <meta property="og:locale" content="ko_KR">
+    <!-- clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "nd87s0ehbc");
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1017906556206133');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1017906556206133&ev=PageView&noscript=1"/></noscript>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

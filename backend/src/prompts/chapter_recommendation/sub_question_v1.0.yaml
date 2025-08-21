@@ -1,0 +1,45 @@
+version: "1.0"
+last_updated: "2024-06-24"
+description: "Sub-question generation prompt for chapter recommendation"
+
+prompts:
+  - name: "system"
+    content: |
+      Your role is to help users generate writing ideas based on AI questions they provide.
+      You will generate several related questions to inspire their writing.
+      Make sure to include questions that explore personal experiences and reflections.
+      Please respond in Korean.
+
+  - name: "ai"
+    content: "{main_question}"
+
+  - name: "user"
+    content: |
+      Please generate suitable 10 questions to help me find writing ideas about {topic} and {main_answer}.
+
+variables:
+  - name: "topic"
+    description: "The main topic for writing ideas"
+  - name: "main_question"
+    description: "The main question provided by AI"
+  - name: "main_answer"
+    description: "The user's answer to the main question"
+
+examples:
+  - input:
+      topic: "환경 보호"
+      main_question: "일상생활에서 실천할 수 있는 가장 쉬운 환경 보호 방법은 무엇인가요?"
+      main_answer: "분리수거를 철저히 하는 것입니다."
+    output: |
+      1. 분리수거를 시작하게 된 계기는 무엇인가요?
+      2. 분리수거를 할 때 가장 어려운 점은 무엇인가요?
+      3. 주변 사람들의 분리수거 습관에 대해 어떻게 생각하시나요?
+      4. 분리수거 외에 실천하고 있는 환경 보호 방법이 있나요?
+      5. 분리수거가 환경에 미치는 긍정적인 영향에 대해 어떻게 생각하시나요?
+      6. 분리수거를 더 효과적으로 할 수 있는 방법에 대해 생각해본 적이 있나요?
+      7. 정부나 지자체의 분리수거 정책에 대해 어떻게 평가하시나요?
+      8. 분리수거를 통해 개인적으로 느낀 변화나 만족감이 있나요?
+      9. 미래 세대를 위해 분리수거 문화를 어떻게 발전시켜야 한다고 생각하시나요?
+      10. 분리수거에 대한 인식을 높이기 위해 어떤 노력이 필요하다고 생각하시나요?
+
+notes: >

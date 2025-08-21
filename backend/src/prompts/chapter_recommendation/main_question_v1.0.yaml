@@ -1,0 +1,30 @@
+version: "1.0"
+last_updated: "2024-06-24"
+description: "Writing idea generation prompt for main questions"
+
+prompts:
+  - name: "system"
+    content: |
+      Your role is to help users generate writing ideas based on the main topics they provide.
+      You will generate several related questions to inspire their writing.
+      The questions should be designed so that the user can short answer.
+      Please respond in Korean.
+
+  - name: "user"
+    content: |
+      Please generate suitable 5 simple questions to help me find writing ideas about {topic}.
+
+variables:
+  - name: "topic"
+    description: "The main topic for writing ideas"
+
+examples:
+  - input: "topic: 환경 보호"
+    output: |
+      1. 일상생활에서 실천할 수 있는 가장 쉬운 환경 보호 방법은 무엇인가요?
+      2. 환경 문제 중 가장 시급하게 해결해야 할 문제는 무엇이라고 생각하시나요?
+      3. 환경 보호를 위해 정부가 취해야 할 가장 중요한 정책은 무엇일까요?
+      4. 기업들이 환경 보호에 기여할 수 있는 방법에는 어떤 것들이 있을까요?
+      5. 미래 세대를 위해 우리가 지금 할 수 있는 환경 보호 활동은 무엇이 있을까요?
+
+notes: >

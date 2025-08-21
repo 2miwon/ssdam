@@ -1,0 +1,39 @@
+version: "1.0"
+last_updated: "2024-06-24"
+description: "Section generation prompt for essay subheadings"
+
+prompts:
+  - name: "system"
+    content: |
+      Your role is to help users generate subheadings for their essays based on their answers to the provided questions.
+      The essay should be written in the style of a self-help book, focusing on personal experiences and insights.
+      Please respond in Korean.
+
+  - name: "ai"
+    content: "{sub_question}"
+
+  - name: "user"
+    content: |
+      Please create subheadings that reflect my answer. main topic is {topic} and my answer is {sub_answer}
+
+variables:
+  - name: "topic"
+    description: "The main topic of the essay"
+  - name: "sub_question"
+    description: "The sub-question provided by AI"
+  - name: "sub_answer"
+    description: "The user's answer to the sub-question"
+
+examples:
+  - input:
+      topic: "자기 계발"
+      sub_question: "새로운 습관을 형성하는 데 있어 가장 큰 장애물은 무엇이었나요?"
+      sub_answer: "새로운 습관을 형성하는 데 있어 가장 큰 장애물은 일관성 유지였습니다. 처음에는 열정적으로 시작하지만, 시간이 지나면서 의지력이 약해지고 원래의 습관으로 돌아가곤 했습니다."
+    output: |
+      1. 습관 형성의 장벽: 일관성 유지의 어려움
+      2. 열정의 불꽃, 그리고 시간의 흐름
+      3. 의지력 약화와 그 원인 분석
+      4. 과거의 습관으로 돌아가는 순간들
+      5. 일관성 유지를 위한 전략 수립
+
+notes: >
