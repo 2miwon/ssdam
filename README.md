@@ -61,12 +61,14 @@ VUE_APP_API_HOST="http://localhost:8000"
 
 # 2. Run Application
 프로젝트 루트 디렉토리에서 다음 명령어를 실행하세요:
+```
 docker-compose -f docker-compose-dev.yml up --build
+```
 실행이 완료되면:
 
-프론트엔드: http://localhost:3000
-백엔드 API: http://localhost:8001
-API 문서: http://localhost:8001/docs
+- 프론트엔드: http://localhost:3000
+- 백엔드 API: http://localhost:8001
+- API 문서: http://localhost:8001/docs
 
 ## frontend
 ```
@@ -110,19 +112,18 @@ ssdam/
 
 # 4. Technical Stack
 ## frontend
-Vue.js 3: 모던 웹 프레임워크
-Vuex: 상태 관리
-Vue Router: 라우팅
-EditorJS: 리치 텍스트 에디터
+- Vue.js 3: 모던 웹 프레임워크
+- Vuex: 상태 관리
+- Vue Router: 라우팅
+- EditorJS: 리치 텍스트 에디터
 
 ## backend
-FastAPI: 고성능 Python 웹 프레임워크
-MongoDB: NoSQL 데이터베이스
-OpenAI API: AI 교정·교열 서비스
-JWT: 사용자 인증
+- FastAPI: 고성능 Python 웹 프레임워크
+- MongoDB: NoSQL 데이터베이스
+- OpenAI API: AI 교정·교열 서비스
 
 ## Database
-MongoDB: 데이터베이스
+- MongoDB: 데이터베이스
 
 # 5. Troubleshooting
 ## 자주 발생하는 문제
@@ -132,12 +133,14 @@ docker-compose down
 docker system prune -f
 ```
 
-다시 빌드 후 실행
+- 다시 빌드 후 실행
+```
 docker-compose -f docker-compose-dev.yml up --build --force-recreate
+```
 ### MongoDB 연결 오류
 
 - Docker Desktop이 실행 중인지 확인
-- .env 파일의 데이터베이스 URL이 올바른지 확인
+- backend/.env 파일의 데이터베이스 URL이 올바른지 확인
 
 ### OpenAI API 오류
 
