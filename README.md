@@ -1,15 +1,14 @@
-📚 쓰담 (Ssdam) - AI 기반 글쓰기 도우미
+# 📚 쓰담 (Ssdam) - AI 기반 글쓰기 도우미
 
-책 집필부터 출간까지, AI와 함께하는 완전한 글쓰기 플랫폼
+쓰담은 작가들의 창작 여정을 지원하는 Notion-Like 워크스페이스 플랫폼입니다. AI 기술을 활용해 주제 발굴부터 원고 교정·교열까지 원스톱으로 지원합니다.
 
-쓰담은 작가들의 창작 여정을 지원하는 종합 글쓰기 플랫폼입니다. AI 기술을 활용해 주제 발굴부터 교정·교열, 온라인 출간까지 원스톱으로 지원합니다.
-✨ 주요 기능
-
-📝 AI 교정·교열: 맞춤법, 띄어쓰기, 문법, 문장 구조를 자동으로 개선
-💡 주제 추천: AI가 제안하는 창의적인 글쓰기 아이디어
-📖 온라인 출간: 작성한 책을 바로 온라인으로 출간
-🎨 직관적인 에디터: 사용하기 쉬운 글쓰기 환경
-📊 진행상황 관리: 챕터별 작성 진도 추적
+![Editor.js](https://img.shields.io/badge/Editor.js-000000.svg?style=for-the-badge&logo=editor.js&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-41B883.svg?style=for-the-badge&logo=vuedotjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-000000.svg?style=for-the-badge&logo=fastapi&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-41B883.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3C8C00.svg?style=for-the-badge&logo=python&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-121517.svg?style=for-the-badge&logo=github&logoColor=white)
 
 # Quick Start
 ```
@@ -125,15 +124,7 @@ JWT: 사용자 인증
 ## Database
 MongoDB: 데이터베이스
 
-# 5. Contribute
-
-이 저장소를 포크하세요
-기능 브랜치를 생성하세요 (git checkout -b feature/amazing-feature)
-변경사항을 커밋하세요 (git commit -m 'Add amazing feature')
-브랜치에 푸시하세요 (git push origin feature/amazing-feature)
-Pull Request를 생성하세요
-
-# 6. Troubleshooting
+# 5. Troubleshooting
 ## 자주 발생하는 문제
 ### Docker 컨테이너가 실행되지 않는 경우
 ```
@@ -153,7 +144,7 @@ Docker Desktop이 실행 중인지 확인
 API 키가 유효한지 확인
 API 사용량 한도를 확인
 
-# 7. License
+# 6. License
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참조하세요.
 ## 📞 Support
 
