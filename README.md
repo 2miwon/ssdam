@@ -136,18 +136,18 @@ docker system prune -f
 docker-compose -f docker-compose-dev.yml up --build --force-recreate
 ### MongoDB 연결 오류
 
-Docker Desktop이 실행 중인지 확인
-.env 파일의 데이터베이스 URL이 올바른지 확인
+- Docker Desktop이 실행 중인지 확인
+- .env 파일의 데이터베이스 URL이 올바른지 확인
 
 ### OpenAI API 오류
 
-API 키가 유효한지 확인
-API 사용량 한도를 확인
+- API 키가 유효한지 확인
+- API 사용량 한도를 확인
 
 # 6. License
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참조하세요.
-## 📞 Support
+# 7. Support
 
-🐛 버그 리포트: GitHub Issues
-💡 기능 요청: GitHub Discussions
-📧 이메일: zhengsfsf@gmail.com
+- 🐛 버그 리포트: GitHub Issues
+- 💡 기능 요청: GitHub Discussion- s
+- 📧 이메일: zhengsfsf@gmail.com
