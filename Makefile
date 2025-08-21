@@ -3,9 +3,8 @@ ENV ?= dev
 .PHONY: venv backend-setup backend-run backend-docker backend-docker-down frontend-setup frontend-run
 
 venv:
-	cd backend
-	python3.12 -m venv .venv
-	chmod +x .venv/bin/activate
+	cd backend && python3.12 -m venv .venv
+	chmod +x backend/.venv/bin/activate
 
 backend-setup: venv
 	cd backend && .venv/bin/pip install --no-cache-dir --upgrade -r requirements.txt
