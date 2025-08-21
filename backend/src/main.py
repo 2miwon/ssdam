@@ -31,7 +31,28 @@ from contextlib import asynccontextmanager
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
+    await init_beanie(
+        database=db,
+        document_models=[
+            User,
+            Book,
+            Page,
+            BookSetting,
+            RefreshToken,
+            ChapterData,
+            RevisionData,
+            DraftData,
+            SentenceData,
+        ],
+    )
+    yield
+    # Shutdown (필요한 경우)
+
+
+app = FastAPI(lifespan=lifespan)
 
 origins = [
     "https://ssdam.ink",
@@ -61,19 +82,4 @@ app.include_router(illustration_generator_router.router)
 
 handler = Mangum(app)
 
-@asynccontextmanager
-async def on_startup():
-    await init_beanie(
-        database=db,
-        document_models=[
-            User,
-            Book,
-            Page,
-            BookSetting,
-            RefreshToken,
-            ChapterData,
-            RevisionData,
-            DraftData,
-            SentenceData
-        ],
-    )
+
